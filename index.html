@@ -4,138 +4,546 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BE Ventures | Handwerk effizient und unternehmerisch</title>
+    <title>ECHTWERK - Zukunftsfähiges Handwerk</title>
     <meta name="description"
-        content="BE Ventures investiert nachhaltig in etablierte Handwerksbetriebe. Wir vereinen Tradition mit digitaler Effizienz und moderner Unternehmenskultur.">
+        content="Wir verbinden traditionelles Handwerk mit digitalen Prozessen und einer modernen Arbeitskultur.">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/vision.css">
+    <link rel="stylesheet" href="css/problems.css">
+    <link rel="stylesheet" href="css/solutions.css">
+    <link rel="stylesheet" href="css/roadmap.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/dividers.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
 </head>
 
 <body>
-    <nav id="navbar">
-        <div class="container">
-            <div class="logo">be ventures</div>
-            <ul class="nav-links">
-                <li><a href="#ansatz">Ansatz</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="hero-image"
-            style="background-image: linear-gradient(rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.3)), url('assets/hero_sharp.png');">
-        </div>
-        <div class="hero-content">
-            <h1 class="reveal">be ventures.</h1>
-            <p class="reveal">Handwerk effizient und unternehmerisch.</p>
-            <a href="#ansatz" class="btn btn-primary reveal">Unser Ansatz</a>
-        </div>
-    </header>
-
-    <section id="ansatz" class="section">
-        <div class="container">
-            <div class="grid">
-                <div class="text-block reveal">
-                    <h2>Zukunftsorientiert. Mitarbeiterfokussiert.</h2>
-                    <p>Wir investieren langfristig in etablierte Unternehmen mit Substanz. Unser Ziel ist es, durch
-                        gezielte Strukturentwicklung und Digitalisierung Werte zu schaffen, während die regionale
-                        Identität und das Handwerk im Zentrum bleiben.</p>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <!-- Nav -->
+            <nav class="nav">
+                <div class="nav-container">
+                    <a href="/" class="logo">
+                        <img src="assets/logo.png" alt="ECHTWERK Logo" style="height: 80px; display: block;">
+                    </a>
+                    <div class="burger-menu" id="burger-menu">
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                        <div class="burger-line"></div>
+                    </div>
                 </div>
-                <div class="image-block reveal">
-                    <img src="assets/digital.png" alt="Digitale Transformation im Handwerk">
+            </nav>
+
+            <!-- Full Screen Nav Overlay -->
+            <div class="nav-overlay" id="nav-overlay">
+                <button class="nav-overlay-close" id="nav-overlay-close" aria-label="Menü schliessen">&times;</button>
+                <div class="nav-overlay-content">
+                    <a href="#vision" class="overlay-link">Unsere Vision</a>
+                    <a href="#problems" class="overlay-link">Herausforderungen</a>
+                    <a href="#solutions" class="overlay-link">Unsere Lösung</a>
+                    <a href="#roadmap" class="overlay-link">Strategie</a>
+                    <a href="#team" class="overlay-link">Wer wir sind</a>
+                    <a href="#contact" class="overlay-link btn-primary"
+                        style="margin-top: 2rem; display: inline-block;">Kontakt</a>
                 </div>
             </div>
 
-            <div class="details-grid reveal" style="margin-top: 4rem;">
-                <div class="detail-item">
-                    <h3>Struktur als Werttreiber</h3>
-                    <p>„Klarheit vor Aktivismus“ – wir glauben, dass nachhaltiges Wachstum nur auf einem soliden
-                        Fundament entstehen kann. Wir etablieren klare Prozesse, Verantwortlichkeiten und Kennzahlen
-                        (KPIs), um die operative Basis zu stärken und Skalierbarkeit zu ermöglichen.</p>
-                </div>
-                <div class="detail-item">
-                    <h3>Gezielte Digitalisierung</h3>
-                    <p>Digitalisierung ist für uns kein Selbstzweck. Wir setzen Technologie dort ein, wo sie die
-                        operative Stabilität erhöht, die Vorhersehbarkeit verbessert und die tägliche Arbeit der
-                        Mitarbeitenden vereinfacht.</p>
-                </div>
-                <div class="detail-item">
-                    <h3>Partnerschaft auf Augenhöhe</h3>
-                    <p>Als Mehrheitsgesellschafter übernehmen wir Verantwortung. Wir sehen uns nicht als klassische
-                        Finanzinvestoren, sondern als unternehmerische Partner, die mit langem Atem und tiefem
-                        Verständnis für das Handwerk agieren.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <main>
+                <!-- Hero Section -->
+                <section class="hero" id="hero">
+                    <div class="hero-bg">
+                        <!-- Abstract overlay or cinematic gradient -->
+                        <div class="hero-gradient"></div>
+                    </div>
 
-    <section id="werte" class="section bg-dark">
-        <div class="container">
-            <h2 class="section-title reveal">Unsere Fokus-Säulen</h2>
-            <div class="card-grid">
-                <div class="card reveal">
-                    <div class="card-icon">01</div>
-                    <h3>Beteiligung</h3>
-                    <p>Mehrheitsbeteiligungen an Betrieben, die eine verlässliche Nachfolgelösung oder einen starken
-                        Partner suchen.</p>
-                </div>
-                <div class="card reveal">
-                    <div class="card-icon">02</div>
-                    <h3>Effizienz</h3>
-                    <p>Optimierung von Prozessen durch gezielte Digitalisierung. Wir machen Komplexität beherrschbar.
-                    </p>
-                </div>
-                <div class="card reveal">
-                    <div class="card-icon">03</div>
-                    <h3>Wachstum</h3>
-                    <p>Positionierung als attraktiver Arbeitgeber und Ausbau der Marktpräsenz durch Synergien in der
-                        Gruppe.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <!-- Brush Strokes -->
+                    <div class="hero-brush-strokes">
+                        <div class="brush-stroke brush-1"></div>
+                        <div class="brush-stroke brush-2"></div>
+                        <div class="brush-stroke brush-3"></div>
+                        <div class="brush-stroke brush-4"></div>
+                    </div>
+                    <div class="container hero-content">
+                        <div class="hero-text">
+                            <h1 class="hero-title">
+                                <span class="line">
+                                    <span class="word">FARBE</span>
+                                </span>
+                                <span class="line">
+                                    <span class="word">AUSBAU</span>
+                                </span>
+                                <span class="line">
+                                    <span class="word accent">PFLEGE.</span>
+                                </span>
+                            </h1>
+                            <p class="hero-subtitle">Ein moderner, unternehmerischer Ansatz für nachhaltiges Handwerk.
+                            </p>
+                            <div class="hero-cta">
+                                <a href="#problems" class="btn-primary">Mehr erfahren</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-    <section id="portfolio" class="section">
-        <div class="container text-center">
-            <h2 class="section-title reveal">Unsere Marken</h2>
-            <div class="portfolio-item reveal">
-                <div class="portfolio-content">
-                    <h3>ECHTWERK</h3>
-                    <p>Qualität, Zuverlässigkeit und strukturierte Abläufe im Bereich Malerei und Veredelung. Unser
-                        Vorzeigebetrieb für modernes Handwerk.</p>
-                    <a href="https://www.echtwerk.ch/" target="_blank" class="link-arrow">Besuchen &rarr;</a>
-                </div>
-                <img src="assets/hero.png" alt="Echtwerk Markenfokus">
-            </div>
-        </div>
-    </section>
+                <!-- Vision Section -->
+                <section class="vision section-padding" id="vision">
+                    <div class="container vision-content">
+                        <h2 class="section-title">Unsere Vision</h2>
+                        <h3 class="vision-statement">Wir machen das Handwerk wieder attraktiv.</h3>
+                        <p class="vision-text">Durch moderne Arbeitskultur und smarte digitale Tools entlasten wir
+                            unsere Teams von Administration, damit der Fokus wieder dort liegt, wo er hingehört: auf dem
+                            echten Handwerk.</p>
+                        <div class="brush-divider">
+                            <svg class="brush-drawing-svg" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <filter id="brush-texture">
+                                        <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4"
+                                            result="noise" />
+                                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R"
+                                            yChannelSelector="G" />
+                                    </filter>
+                                </defs>
+                                <path class="brush-path" d="M35,22 C65,30 85,62 100,62 C115,62 135,30 165,22"
+                                    fill="none" stroke="#3F6D50" stroke-width="16" stroke-linecap="round"
+                                    stroke-linejoin="round" filter="url(#brush-texture)" />
+                                <g class="brush-tip" style="visibility: hidden;">
+                                    <!-- Brush Icon (Primary Blue: #2D5784) -->
+                                    <path d="M-2,-12 L2,-12 L3,-2 L-3,-2 Z" fill="#2D5784" />
+                                    <path d="M-3,-2 L3,-2 L3,0 L-3,0 Z" fill="#2D5784" opacity="0.8" />
+                                    <path d="M-4,0 L4,0 C5,6 2,10 0,10 C-2,10 -5,6 -4,0 Z" fill="#2D5784" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </section>
 
-    <footer id="kontakt">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <h3>BE VENTURES</h3>
-                    <p>Bazzi & Eckert Ventures GmbH</p>
-                    <p>Schweiz</p>
-                </div>
-                <div class="footer-contact">
-                    <p>Lassen Sie uns über die Zukunft Ihres Betriebes sprechen.</p>
-                    <a href="mailto:info@beventures.ch" class="btn btn-outline">Kontakt aufnehmen</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Bazzi & Eckert Ventures GmbH. Alle Rechte vorbehalten.</p>
-            </div>
-        </div>
-    </footer>
+                <!-- Problems Section -->
+                <section class="problems section-padding" id="problems">
+                    <div class="container">
+                        <div class="section-header center">
+                            <h2 class="section-title" style="color: #3F6D50;">Herausforderungen</h2>
+                            <h3 class="section-headline">Das Handwerk im Wandel</h3>
+                        </div>
 
-    <script src="main.js"></script>
+                        <div class="problems-grid">
+                            <div class="problem-card">
+                                <div class="problem-icon">
+                                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor"
+                                        stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        <path d="m14 14 6 6M20 14l-6 6" />
+                                    </svg>
+                                </div>
+                                <h4>Nachfolge-Problematik</h4>
+                                <p>Viele etablierte, lokale Betriebe finden keine geeigneten Nachfolger.</p>
+                            </div>
+                            <div class="problem-card">
+                                <div class="problem-icon">
+                                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor"
+                                        stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                        <path d="M12 2v3"></path>
+                                    </svg>
+                                </div>
+                                <h4>Fachkräftemangel</h4>
+                                <p>Akuter Mangel an qualifizierten Fachkräften und ein oft wenig attraktives
+                                    Arbeitgeber-Image im Handwerk.</p>
+                            </div>
+                            <div class="problem-card">
+                                <div class="problem-icon">
+                                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor"
+                                        stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <path d="m3 15 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <h4>Digitalisierungs-Defizit</h4>
+                                <p>Niedriger Digitalisierungsgrad und hohe administrative Belastung traditioneller
+                                    Betriebe.</p>
+                            </div>
+                            <div class="problem-card">
+                                <div class="problem-icon">
+                                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor"
+                                        stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect width="7" height="7" x="3" y="3" rx="1"></rect>
+                                        <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+                                        <rect width="7" height="7" x="14" y="14" rx="1"></rect>
+                                        <rect width="7" height="7" x="3" y="14" rx="1"></rect>
+                                        <path d="M10 17h4M10 6.5h4M6.5 10v4M17 10v4"></path>
+                                    </svg>
+                                </div>
+                                <h4>Fragmentierter Markt</h4>
+                                <p>Stark fragmentierte Branche mit begrenztem individuellem Wachstumspotenzial.</p>
+                            </div>
+                        </div>
+                        <div class="brush-divider">
+                            <svg class="brush-drawing-svg" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                                <path class="brush-path" d="M35,22 C65,30 85,62 100,62 C115,62 135,30 165,22"
+                                    fill="none" stroke="#3F6D50" stroke-width="16" stroke-linecap="round"
+                                    stroke-linejoin="round" filter="url(#brush-texture)" />
+                                <g class="brush-tip" style="visibility: hidden;">
+                                    <!-- Brush Icon (Primary Blue: #2D5784) -->
+                                    <path d="M-2,-12 L2,-12 L3,-2 L-3,-2 Z" fill="#2D5784" />
+                                    <path d="M-3,-2 L3,-2 L3,0 L-3,0 Z" fill="#2D5784" opacity="0.8" />
+                                    <path d="M-4,0 L4,0 C5,6 2,10 0,10 C-2,10 -5,6 -4,0 Z" fill="#2D5784" />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- The ECHTWERK Solution Section -->
+                <section class="solutions section-padding" id="solutions">
+                    <div class="container">
+                        <div class="solution-header center">
+                            <h2 class="section-title" style="color: #3F6D50;">Unsere Lösung</h2>
+                            <h3 class="section-headline">So schaffen wir echten Mehrwert.</h3>
+                        </div>
+
+                        <!-- Solution 1: Employees -->
+                        <div class="solution-row">
+                            <div class="solution-content">
+                                <h3>Fachkräfte gewinnen</h3>
+                                <ul>
+                                    <li>Wir positionieren das Handwerk als attraktiven, modernen Karriereweg.</li>
+                                    <li>Begeisterung junger Talente durch zeitgemässe Arbeitsbedingungen.</li>
+                                    <li>Mitarbeiterförderung durch gezielte Weiterbildungsprogramme.</li>
+                                    <li>Attraktive Benefits wie hochwertige Arbeitsausstattung und Fitnessangebote.</li>
+                                </ul>
+                            </div>
+                            <div class="solution-image">
+                                <img src="assets/craft_team.png" alt="Eingespieltes Team" class="rounded-image">
+                            </div>
+                        </div>
+
+                        <!-- Solution 2: Partners -->
+                        <div class="solution-row reverse">
+                            <div class="solution-content">
+                                <h3>Tradition weiterführen</h3>
+                                <ul>
+                                    <li>Sicherung der Unternehmensnachfolge und des Lebenswerks.</li>
+                                    <li>Langfristiger Erhalt von lokalen Arbeitsplätzen.</li>
+                                    <li>Entlastung von administrativen Aufgaben durch zentrale Services.</li>
+                                    <li>Steigerung von Effizienz und Margen durch Prozess-Standardisierung.</li>
+                                </ul>
+                            </div>
+                            <div class="solution-image">
+                                <img src="assets/craft_owner_painter.png" alt="Betriebsinhaber" class="rounded-image">
+                            </div>
+                        </div>
+
+                        <!-- Solution 3: Customers -->
+                        <div class="solution-row">
+                            <div class="solution-content">
+                                <h3>Fokus auf die Wertschöpfung</h3>
+                                <ul>
+                                    <li>Reduktion administrativer Aufwände durch smarte Digitalisierung.</li>
+                                    <li>Voller Fokus auf die handwerkliche Kernkompetenz.</li>
+                                    <li>Mitarbeitende können genau das machen, was sie am besten können.</li>
+                                    <li>Effizientere Prozesse von der Offerte bis zur Rechnungsstellung.</li>
+                                </ul>
+                            </div>
+                            <div class="solution-image">
+                                <img src="assets/craft_painter.png" alt="Fokus auf das Handwerk" class="rounded-image">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Target Partnership Profile Section -->
+                <section class="partnership section-padding" id="partnership">
+                    <div class="container">
+                        <div class="section-header center">
+                            <h2 class="section-title">Partnerschaft</h2>
+                            <h3 class="section-headline">Unser Suchprofil</h3>
+                        </div>
+
+                        <div class="partnership-grid">
+                            <div class="partner-item">
+                                <div class="partner-icon">
+                                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor"
+                                        stroke-width="1.5" fill="none">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <h4>Region</h4>
+                                <p>Zentral- und Ostschweiz.</p>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-icon">
+                                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor"
+                                        stroke-width="1.5" fill="none">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <h4>Grösse</h4>
+                                <p>Kleine bis mittlere Betriebe mit 3–10 Mitarbeitenden.</p>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-icon">
+                                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor"
+                                        stroke-width="1.5" fill="none">
+                                        <path
+                                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h4>Gewerke</h4>
+                                <p>Malerarbeiten, Trockenbau, Fassadenreinigung oder verwandte Bereiche.</p>
+                            </div>
+                            <div class="partner-item">
+                                <div class="partner-icon">
+                                    <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor"
+                                        stroke-width="1.5" fill="none">
+                                        <polygon
+                                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                        </polygon>
+                                    </svg>
+                                </div>
+                                <h4>Qualitäten</h4>
+                                <p>Etablierter lokaler Ruf, loyaler Kundenstamm und eine qualitätsbewusste,
+                                    bodenständige Kultur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Roadmap & Growth Strategy Section -->
+                <section class="roadmap section-padding" id="roadmap">
+                    <div class="container">
+                        <div class="section-header center">
+                            <h2 class="section-title" style="color: #3F6D50;">Strategie</h2>
+                            <h3 class="section-headline">Roadmap & Wachstum</h3>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Schritt 1: Scouting</h4>
+                                    <ul>
+                                        <li>Identifikation von etablierten Betrieben mit anstehendem Nachfolgebedarf.
+                                        </li>
+                                        <li>Fokus auf gesunde Unternehmensstrukturen und stabile Erträge.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Schritt 2: Übernahme</h4>
+                                    <ul>
+                                        <li>Akquisition oder Mehrheitsbeteiligung durch ECHTWERK.</li>
+                                        <li>Bisherige Eigentümer bleiben auf Wunsch in einer Übergangsphase aktiv
+                                            involviert.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Schritt 3: Integration</h4>
+                                    <ul>
+                                        <li>Zentralisierung von nicht-wertschöpfenden administrativen Tätigkeiten.</li>
+                                        <li>Einführung moderner Software-Tools und standardisierter Prozesse.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Schritt 4/5: Expansion</h4>
+                                    <ul>
+                                        <li>Gezielter regionaler Ausbau des ECHTWERK-Netzwerks.</li>
+                                        <li>Stärkung der Dachmarke für höchste Visibilität und Kundenvertrauen.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item highlight-goal">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Mittelfristiges Ziel (Ende 2027)</h4>
+                                    <p>Skaliertes und erweitertes Netzwerk über mehrere Regionen hinweg.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Team Section -->
+                <section class="team section-padding" id="team">
+                    <div class="container">
+                        <div class="section-header center">
+                            <h2 class="section-title">Wer wir sind</h2>
+                            <h3 class="section-headline">Die Köpfe hinter ECHTWERK</h3>
+                        </div>
+
+                        <div class="team-grid">
+                            <!-- Team Member 1: Achim Eckert -->
+                            <div class="team-member">
+                                <!-- Placeholder Image -->
+                                <div class="team-photo">[Foto Platzhalter]</div>
+                                <h3>Achim Eckert</h3>
+                                <div class="team-role">Gründer / Partner</div>
+                                <p class="team-bio">[Kurzbeschreibung oder Zitat von Achim Eckert. Fokus auf Vision,
+                                    Handwerk und moderne Unternehmensnachfolge.]</p>
+                                <div class="team-social">
+                                    <a href="#" class="social-link" title="LinkedIn">
+                                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                                            <path
+                                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                            </path>
+                                            <rect x="2" y="9" width="4" height="12"></rect>
+                                            <circle cx="4" cy="4" r="2"></circle>
+                                        </svg>
+                                    </a>
+                                    <a href="mailto:achim.eckert@bazzieckert.com" class="social-link" title="Email">
+                                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                                            <path
+                                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                            </path>
+                                            <polyline points="22,6 12,13 2,6"></polyline>
+                                        </svg>
+                                    </a>
+                                    <a href="tel:+41793740879" class="social-link" title="Phone">
+                                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                                            <path
+                                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Team Member 2: Luca Bazzi -->
+                            <div class="team-member">
+                                <!-- Placeholder Image -->
+                                <div class="team-photo">[Foto Platzhalter]</div>
+                                <h3>Luca Bazzi</h3>
+                                <div class="team-role">Gründer / Partner</div>
+                                <p class="team-bio">[Kurzbeschreibung oder Zitat von Luca Bazzi. Fokus auf
+                                    Digitalisierung, Effizienz und die Transformation der Branche.]</p>
+                                <div class="team-social">
+                                    <a href="#" class="social-link" title="LinkedIn">
+                                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                                            <path
+                                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                            </path>
+                                            <rect x="2" y="9" width="4" height="12"></rect>
+                                            <circle cx="4" cy="4" r="2"></circle>
+                                        </svg>
+                                    </a>
+                                    <a href="mailto:luca.bazzi@bazzieckert.com" class="social-link" title="Email">
+                                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                                            <path
+                                                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                            </path>
+                                            <polyline points="22,6 12,13 2,6"></polyline>
+                                        </svg>
+                                    </a>
+                                    <a href="tel:+41795079822" class="social-link" title="Phone">
+                                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                                            <path
+                                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section class="contact section-padding" id="contact">
+                    <div class="container">
+                        <div class="contact-grid">
+                            <div class="contact-info">
+                                <h2 class="section-title">Kontakt</h2>
+                                <h3 class="contact-headline">Lassen Sie uns über die Zukunft Ihres Betriebs sprechen.
+                                </h3>
+                                <p class="contact-text">Wir suchen den Dialog auf Augenhöhe. Diskret, unverbindlich und
+                                    partnerschaftlich.</p>
+
+                                <div class="contact-details">
+                                    <div class="contact-item">
+                                        <span class="contact-label">Achim Eckert</span>
+                                        <a href="tel:+41762259498" class="contact-link">+41 76 225 94 98</a><br>
+                                        <a href="mailto:eachim@me.com" class="contact-link">eachim@me.com</a>
+                                    </div>
+                                    <div class="contact-item" style="margin-top: var(--spacing-sm);">
+                                        <span class="contact-label">Luca Bazzi</span>
+                                        <a href="tel:+41795765516" class="contact-link">+41 79 576 55 16</a><br>
+                                        <a href="mailto:luca.bazzi@outlook.com"
+                                            class="contact-link">luca.bazzi@outlook.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-form-container">
+                                <form class="contact-form" action="#" method="POST"
+                                    onsubmit="event.preventDefault(); alert('Vielen Dank für Ihre Nachricht. Wir werden uns in Kürze bei Ihnen melden.');">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" name="name" required placeholder="Ihr Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">E-Mail</label>
+                                        <input type="email" id="email" name="email" required
+                                            placeholder="ihre.email@beispiel.ch">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Nachricht</label>
+                                        <textarea id="message" name="message" rows="4" required
+                                            placeholder="Wie können wir Ihnen helfen?"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn-primary">Nachricht senden</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-brand">
+                        <h2>ECHTWERK.</h2>
+                        <p>Zukunftsfähiges Handwerk</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="impressum.html">Impressum</a>
+                        <a href="#contact">Kontakt</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 ECHTWERK – eine Marke der Bazzi & Eckert Ventures GmbH. Alle Rechte vorbehalten.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

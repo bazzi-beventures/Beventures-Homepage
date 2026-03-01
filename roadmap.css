@@ -1,0 +1,215 @@
+/* --- Partnership Section --- */
+.partnership {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+}
+
+.partnership .section-title {
+    color: var(--color-accent-gold);
+}
+
+.partnership .section-headline {
+    color: var(--color-text-light);
+}
+
+.partnership-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .partnership-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .partnership-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.partner-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-md);
+    border-radius: 12px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: center;
+}
+
+.partner-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.partner-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.partner-item h4 {
+    color: var(--color-accent-gold);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.partner-item p {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* --- Roadmap / Timeline Section --- */
+.roadmap {
+    background-color: var(--color-background-light);
+}
+
+.roadmap .section-title {
+    color: var(--color-primary-green) !important;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: var(--spacing-lg) auto 0;
+    padding-left: 30px;
+}
+
+@media (min-width: 768px) {
+    .timeline {
+        padding-left: 0;
+    }
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    width: 2px;
+    background-color: var(--color-primary-blue);
+    opacity: 0.2;
+}
+
+@media (min-width: 768px) {
+    .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--spacing-lg);
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .timeline-item {
+        width: 50%;
+    }
+
+    .timeline-item:nth-child(odd) {
+        padding-right: 40px;
+        text-align: right;
+        left: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        padding-left: 40px;
+        left: 50%;
+    }
+}
+
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-accent-gold);
+    left: -10px;
+    top: 5px;
+    z-index: 2;
+    box-shadow: 0 0 0 4px rgba(232, 173, 67, 0.2);
+}
+
+@media (min-width: 768px) {
+    .timeline-item:nth-child(odd) .timeline-dot {
+        right: -10px;
+        left: auto;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: -10px;
+    }
+}
+
+.timeline-content {
+    background: #ffffff;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(45, 87, 132, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(45, 87, 132, 0.15);
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 6px rgba(232, 173, 67, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content h4 {
+    color: var(--color-primary-blue);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.timeline-content li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-text-dark);
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.timeline-content li::before {
+    content: '•';
+    color: var(--color-accent-gold);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: inherit;
+}
+
+.timeline-item.highlight-goal .timeline-content {
+    background: var(--color-primary-blue);
+    color: var(--color-text-light);
+}
+
+.timeline-item.highlight-goal .timeline-content h4 {
+    color: var(--color-accent-gold);
+}
+
+.timeline-item.highlight-goal .timeline-content li {
+    color: var(--color-text-light);
+    opacity: 0.9;
+}
