@@ -1,0 +1,156 @@
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--color-background-dark);
+}
+
+.hero-gradient {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(63, 109, 80, 0.15) 0%, rgba(10, 10, 10, 1) 50%);
+    opacity: 0;
+    animation: pulseGradient 15s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGradient {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 120px;
+    /* V4: Prevent overlap with the fixed white nav banner */
+}
+
+.hero-text {
+    max-width: 800px;
+}
+
+.hero-title {
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-title .line {
+    overflow: hidden;
+    padding-bottom: 0.1em;
+    /* Prevent descender cut-off */
+    display: block;
+}
+
+.hero-title .word {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.hero-title .accent {
+    color: var(--color-accent-gold);
+}
+
+.hero-subtitle {
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    max-width: 600px;
+    margin-bottom: var(--spacing-md);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hero-cta {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* --- Hero Brush Strokes --- */
+.hero-brush-strokes {
+    position: absolute;
+    bottom: -5%;
+    right: -5%;
+    width: 70%;
+    height: 110%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.brush-stroke {
+    position: absolute;
+    width: 150%;
+    height: 12vh;
+    /* Slightly thinner for realistic look */
+    background: currentColor;
+    border-radius: 100px;
+    transform-origin: bottom left;
+    opacity: 0.95;
+    /* Less transparent */
+    filter: blur(2px);
+    /* V4: Drastically reduced blur for harder edges */
+    /* Animation base */
+    transform: rotate(-35deg) translateX(-100%);
+    animation: brushSwipe 2.5s cubic-bezier(0.1, 0.7, 0.1, 1) forwards;
+    /* Smoother curve */
+}
+
+@keyframes brushSwipe {
+    to {
+        transform: rotate(-35deg) translateX(0);
+    }
+}
+
+.brush-1 {
+    color: #3F6D50;
+    bottom: -5%;
+    left: 10%;
+    animation-delay: 0.1s;
+}
+
+.brush-2 {
+    color: #2D5784;
+    bottom: 2%;
+    left: 13%;
+    height: 18vh;
+    animation-delay: 0.3s;
+}
+
+.brush-3 {
+    color: #E8AD43;
+    bottom: 12%;
+    left: 16%;
+    height: 10vh;
+    animation-delay: 0.5s;
+}
+
+.brush-4 {
+    color: #497B5B;
+    bottom: 18%;
+    left: 19%;
+    height: 15vh;
+    animation-delay: 0.7s;
+}
