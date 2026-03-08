@@ -459,6 +459,15 @@ a {
     padding: 2rem;
 }
 
+.echtwerk-brand-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.echtwerk-brand-link:hover {
+    transform: scale(1.05);
+}
+
 .echtwerk-brand-logo {
     max-width: 250px;
     width: 100%;
