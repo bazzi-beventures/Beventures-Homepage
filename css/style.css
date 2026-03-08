@@ -572,7 +572,7 @@ a {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: var(--bg-dark);
+    background-color: #1a1a1a;
     color: white;
     padding: 1.5rem;
     z-index: 1000;
