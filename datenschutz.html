@@ -1,99 +1,224 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html lang="de-CH">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Datenschutzerklärung - BE Ventures">
-    <title>Datenschutzerklärung | BE Ventures</title>
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutzerklärung | BE Ventures</title>
+<meta name="description" content="Datenschutzerklärung der Bazzi &amp; Eckert Ventures GmbH.">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EFEFEC;
+  --ink:#14161A;
+  --muted:#6E7378;
+  --rule:#C6C7C1;
+  --mark:#2B3A55;
+  --grotesk:"Familjen Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{-webkit-text-size-adjust:100%}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--grotesk);
+  font-size:17px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  min-height:100svh;
+  display:flex;
+  padding:clamp(20px,4vw,56px);
+}
+
+/* --- Rahmen mit Schnittmarken ------------------------------------------ */
+
+.sheet{
+  position:relative;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  padding:clamp(24px,5vw,64px);
+}
+
+.tick{position:absolute;width:14px;height:14px}
+.tick::before,.tick::after{content:"";position:absolute;background:var(--rule)}
+.tick::before{width:14px;height:1px;top:0}
+.tick::after{width:1px;height:14px;left:0}
+.tick.tl{top:0;left:0}
+.tick.tr{top:0;right:0}
+.tick.tr::after{left:auto;right:0}
+.tick.bl{bottom:0;left:0}
+.tick.bl::before{top:auto;bottom:0}
+.tick.br{bottom:0;right:0}
+.tick.br::before{top:auto;bottom:0}
+.tick.br::after{left:auto;right:0}
+
+/* --- Kopfzeile ---------------------------------------------------------- */
+
+.masthead{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:24px;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.masthead .wordmark{color:var(--ink);font-weight:500;border-bottom:none}
+.masthead .wordmark:hover{color:var(--mark)}
+
+/* --- Hauptteil ---------------------------------------------------------- */
+
+.main{
+  flex:1;
+  padding:clamp(48px,10vh,112px) 0 clamp(40px,8vh,72px);
+  max-width:42rem;
+}
+
+.title{
+  font-size:clamp(30px,5.4vw,52px);
+  font-weight:500;
+  letter-spacing:-.03em;
+  line-height:1;
+}
+
+/* Schlussstrich – zieht sich beim Laden durch */
+.underline{
+  height:1px;
+  background:var(--ink);
+  margin:clamp(28px,5vh,40px) 0 clamp(28px,5vh,40px);
+  transform-origin:left center;
+  transform:scaleX(0);
+  animation:draw 1100ms cubic-bezier(.22,.61,.36,1) 250ms forwards;
+}
+
+@keyframes draw{to{transform:scaleX(1)}}
+
+/* --- Fliesstext --------------------------------------------------------- */
+
+.prose p{margin-bottom:1.1em;max-width:38rem}
+.prose p:last-child{margin-bottom:0}
+.prose strong{font-weight:600}
+
+.prose h2{
+  font-family:var(--mono);
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  border-top:1px solid var(--rule);
+  margin:clamp(32px,5vh,44px) 0 16px;
+  padding-top:16px;
+}
+
+.prose h2:first-child{margin-top:0;padding-top:0;border-top:none}
+
+/* --- Fusszeile ---------------------------------------------------------- */
+
+.colophon{
+  border-top:1px solid var(--rule);
+  padding-top:16px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:8px 24px;
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.06em;
+  color:var(--muted);
+}
+
+.colophon nav{display:flex;flex-wrap:wrap;gap:20px}
+.colophon [aria-current="page"]{color:var(--ink)}
+
+/* --- Links -------------------------------------------------------------- */
+
+a{
+  color:inherit;
+  text-decoration:none;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:1px;
+  transition:border-color .18s ease,color .18s ease;
+}
+
+a:hover{color:var(--mark);border-bottom-color:var(--mark)}
+
+a:focus-visible{
+  outline:2px solid var(--mark);
+  outline-offset:3px;
+  border-bottom-color:transparent;
+}
+
+/* --- Klein -------------------------------------------------------------- */
+
+@media (max-width:560px){
+  body{padding:14px}
+  .sheet{padding:22px}
+  .colophon{flex-direction:column}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .underline{animation:none;transform:scaleX(1)}
+  a{transition:none}
+}
+</style>
 </head>
-
 <body>
-    <!-- Fixed Top Navigation -->
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="index.html#home" class="logo">
-                <img src="assets/logo_transparent.png" alt="BE Ventures Logo" class="nav-logo-img">
-            </a>
-            <div class="nav-links">
-                <a href="index.html#vision" class="nav-link">Unsere Vision</a>
-                <a href="index.html#ansatz" class="nav-link">Unser Ansatz</a>
-                <a href="index.html#marken" class="nav-link">Unsere Marken</a>
-                <a href="index.html#team" class="nav-link">Wer wir sind</a>
-            </div>
-        </div>
+
+<div class="sheet">
+  <span class="tick tl"></span><span class="tick tr"></span>
+  <span class="tick bl"></span><span class="tick br"></span>
+
+  <header class="masthead">
+    <a href="index.html" class="wordmark">BE Ventures</a>
+    <span>Datenschutz</span>
+  </header>
+
+  <main class="main">
+    <h1 class="title">Datenschutz&shy;erklärung</h1>
+
+    <div class="underline" role="presentation"></div>
+
+    <div class="prose">
+      <p>Verantwortliche Stelle im Sinne der Datenschutzgesetze ist:<br>
+        <strong>Bazzi &amp; Eckert Ventures GmbH</strong><br>
+        Weidstrasse 31, 8472 Seuzach, Schweiz
+      </p>
+
+      <h2>1. Erfassung von allgemeinen Daten und Informationen</h2>
+      <p>Mit jedem Aufruf der Internetseite durch eine betroffene Person oder ein automatisiertes System werden eine Reihe von allgemeinen Daten und Informationen erfasst. Diese allgemeinen Daten und Informationen werden in den Logfiles des Servers gespeichert. Erfasst werden können die (1) verwendeten Browsertypen und Versionen, (2) das vom zugreifenden System verwendete Betriebssystem, (3) die Internetseite, von welcher ein zugreifendes System auf unsere Internetseite gelangt (sogenannte Referrer), (4) die Unterwebseiten, welche über ein zugreifendes System auf unserer Internetseite angesteuert werden, (5) das Datum und die Uhrzeit eines Zugriffs auf die Internetseite, (6) eine Internet-Protokoll-Adresse (IP-Adresse) und (7) der Internet-Service-Provider des zugreifenden Systems.</p>
+
+      <h2>2. Cookies</h2>
+      <p>Die Internetseiten der Bazzi &amp; Eckert Ventures GmbH verwenden Cookies. Cookies sind Textdateien, welche über einen Internetbrowser auf einem Computersystem abgelegt und gespeichert werden. Durch den Einsatz von Cookies können wir den Nutzern dieser Internetseite nutzerfreundlichere Services bereitstellen, die ohne die Cookie-Setzung nicht möglich wären.</p>
+
+      <h2>3. Kontaktmöglichkeit über die Internetseite</h2>
+      <p>Sofern eine betroffene Person per E-Mail Kontakt mit dem für die Verarbeitung Verantwortlichen aufnimmt, werden die von der betroffenen Person übermittelten personenbezogenen Daten automatisch gespeichert. Solche auf freiwilliger Basis von einer betroffenen Person an den für die Verarbeitung Verantwortlichen übermittelten personenbezogenen Daten werden für Zwecke der Bearbeitung oder der Kontaktaufnahme zur betroffenen Person gespeichert. Es erfolgt keine Weitergabe dieser personenbezogenen Daten an Dritte.</p>
+
+      <h2>4. Rechte der betroffenen Person</h2>
+      <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.</p>
+    </div>
+  </main>
+
+  <footer class="colophon">
+    <span>© 2026 Bazzi &amp; Eckert Ventures GmbH</span>
+    <nav>
+      <a href="index.html">Startseite</a>
+      <a href="impressum.html">Impressum</a>
+      <span aria-current="page">Datenschutz</span>
     </nav>
-    <div id="scrollProgress" class="scroll-progress-bar"></div>
+  </footer>
+</div>
 
-    <main class="main-content" style="padding-top: 150px; min-height: 70vh;">
-        <section class="content-block padding-y-lg">
-            <h1 class="section-title">Datenschutzerklärung</h1>
-            <div class="text-content"
-                style="max-width: 800px; margin: 0 auto; line-height: 1.6; color: var(--text-main);">
-                <p>Verantwortliche Stelle im Sinne der Datenschutzgesetze ist:<br>
-                    <strong>Bazzi & Eckert Ventures GmbH</strong><br>
-                    Weidstrasse 31, 8472 Seuzach, Schweiz
-                </p>
-
-                <h3 style="margin-top: 2rem; color: var(--text-blue-dark);">1. Erfassung von allgemeinen Daten und
-                    Informationen</h3>
-                <p>Mit jedem Aufruf der Internetseite durch eine betroffene Person oder ein automatisiertes System
-                    werden eine Reihe von allgemeinen Daten und Informationen erfasst. Diese allgemeinen Daten und
-                    Informationen werden in den Logfiles des Servers gespeichert. Erfasst werden können die (1)
-                    verwendeten Browsertypen und Versionen, (2) das vom zugreifenden System verwendete Betriebssystem,
-                    (3) die Internetseite, von welcher ein zugreifendes System auf unsere Internetseite gelangt
-                    (sogenannte Referrer), (4) die Unterwebseiten, welche über ein zugreifendes System auf unserer
-                    Internetseite angesteuert werden, (5) das Datum und die Uhrzeit eines Zugriffs auf die
-                    Internetseite, (6) eine Internet-Protokoll-Adresse (IP-Adresse) und (7) der
-                    Internet-Service-Provider des zugreifenden Systems.</p>
-
-                <h3 style="margin-top: 2rem; color: var(--text-blue-dark);">2. Cookies</h3>
-                <p>Die Internetseiten der Bazzi & Eckert Ventures GmbH verwenden Cookies. Cookies sind Textdateien,
-                    welche über einen Internetbrowser auf einem Computersystem abgelegt und gespeichert werden. Durch
-                    den Einsatz von Cookies können wir den Nutzern dieser Internetseite nutzerfreundlichere Services
-                    bereitstellen, die ohne die Cookie-Setzung nicht möglich wären.</p>
-
-                <h3 style="margin-top: 2rem; color: var(--text-blue-dark);">3. Kontaktmöglichkeit über die Internetseite
-                </h3>
-                <p>Sofern eine betroffene Person per E-Mail Kontakt mit dem für die Verarbeitung Verantwortlichen
-                    aufnimmt, werden die von der betroffenen Person übermittelten personenbezogenen Daten automatisch
-                    gespeichert. Solche auf freiwilliger Basis von einer betroffenen Person an den für die Verarbeitung
-                    Verantwortlichen übermittelten personenbezogenen Daten werden für Zwecke der Bearbeitung oder der
-                    Kontaktaufnahme zur betroffenen Person gespeichert. Es erfolgt keine Weitergabe dieser
-                    personenbezogenen Daten an Dritte.</p>
-
-                <h3 style="margin-top: 2rem; color: var(--text-blue-dark);">4. Rechte der betroffenen Person</h3>
-                <p>Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche
-                    Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck
-                    der Datenverarbeitung und ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten.
-                    Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns
-                    wenden.</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Area -->
-    <section class="section-footer">
-        <div class="footer-statement">
-            <h2>Langfristig denken. Verantwortung übernehmen. Substanz entwickeln.</h2>
-        </div>
-        <footer class="main-footer">
-            <p>&copy; 2026 Bazzi & Eckert Ventures GmbH. Alle Rechte vorbehalten.</p>
-            <div class="footer-legal-links">
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutzerklärung</a>
-            </div>
-        </footer>
-    </section>
-
-    <!-- Scripts -->
-    <script src="js/main.js"></script>
 </body>
-
 </html>
